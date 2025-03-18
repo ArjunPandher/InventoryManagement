@@ -55,7 +55,7 @@ const Sidebar = () => {
             isSidebarCollapsed ? 'px-5' : 'px-7'
         }`}>
             <div>logo</div>
-            <h1 className={`${isSidebarCollapsed ? 'hidden' : 'block'} font-extrabold text-2xl`}>APP NAME</h1>
+            <h1 className={`${isSidebarCollapsed ? 'hidden' : 'block'} primary1 font-extrabold`}>APP NAME</h1>
 
             <button className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100' onClick={toggleSidebar}>
                 <Menu className='w-4 h-4'/>
