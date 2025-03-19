@@ -1,1 +1,1 @@
-A full stack application that utilizes NextJS and TailwindCSS.
+A full stack application that utilizes NextJS, TailwindCSS, PostgreSQL and Prisma.
