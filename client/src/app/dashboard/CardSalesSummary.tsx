@@ -8,10 +8,16 @@ const CardSalesSummary = () => {
     // redux toolkit query will make sure there will not be more api calls than you need
     // i hate passing props so i prefer to do it this way (rather than calling the method)
     // once in dashboard/page.tsx
-    const { data, isLoading } = useGetDashboardMetricsQuery();
+    const { data, isLoading, isError } = useGetDashboardMetricsQuery();
+
     const salesData = data?.salesSummary || [];
 
     const [timeframe, setTimeframe] = useState("weekly");
+
+    // early returns only allowed after the use of react hooks
+    if (isError) {
+        return <div className="m-5">Failed to fetch data.</div>
+    }
 
     const totalValueSum = salesData.reduce((acc, curr) => acc + curr.totalValue, 0) || 0;
 
